@@ -1,60 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Ironclad Analytics Group</title>
-  <!-- Content Security Policy to help protect the site -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
   <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">Ironclad Analytics</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="index.html#testimonials">Testimonials</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="portfolio-hero">
-      <h1>Our Portfolio</h1>
-      <p>A selection of our favourite projects.</p>
-    </div>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Ironclad Analytics Group logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Portfolio hero -->
+  <header class="portfolio-hero">
+    <h1>Our Portfolio</h1>
+    <p>A selection of our favourite projects.</p>
   </header>
 
+  <!-- Portfolio grid -->
   <section class="portfolio-grid">
-    <!-- Sales comparison dashboard project -->
     <div class="portfolio-item">
-      <img src="sales_comparison.png" alt="Sales comparison dashboard" class="portfolio-image" />
-      <h4>Sales Comparison Dashboard</h4>
+      <img class="portfolio-image" src="sales_comparison.png" alt="Sales Comparison Dashboard" />
+      <h3>Sales Comparison Dashboard</h3>
       <p>
-        A dynamic dashboard that compares quarterly sales performance across multiple products and regions, empowering executives to spot growth opportunities at a glance.
+        A dynamic dashboard that compares quarterly sales performance across
+        multiple products and regions, empowering executives to spot growth
+        opportunities at a glance.
       </p>
     </div>
-    <!-- Revenue scenarios forecast project -->
     <div class="portfolio-item">
-      <img src="revenue_scenarios.png" alt="Revenue scenarios forecast" class="portfolio-image" />
-      <h4>Revenue Scenarios Forecast</h4>
+      <img class="portfolio-image" src="revenue_scenarios.png" alt="Revenue Scenarios Forecast" />
+      <h3>Revenue Scenarios Forecast</h3>
       <p>
-        An advanced forecasting tool that models best‑, expected‑, and worst‑case revenue outcomes, enabling data‑driven strategic planning.
+        An advanced forecasting tool that models best‑, expected‑ and
+        worst‑case revenue outcomes, enabling data‑driven strategic planning.
       </p>
     </div>
-    <!-- Conversion funnel analysis project -->
     <div class="portfolio-item">
-      <img src="conversion_funnel_horizontal.png" alt="Conversion funnel analysis" class="portfolio-image" />
-      <h4>Conversion Funnel Analysis</h4>
+      <img class="portfolio-image" src="conversion_funnel_horizontal.png" alt="Conversion Funnel Analysis" />
+      <h3>Conversion Funnel Analysis</h3>
       <p>
-        A streamlined dashboard visualizing user drop‑off at each funnel stage, helping teams optimize their marketing and product experiences to maximize conversions.
+        A streamlined dashboard visualising user drop‑off at each funnel
+        stage, helping teams optimise their marketing and product
+        experiences to maximise conversions.
       </p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Ironclad Analytics Group. All rights reserved.</p>
+    <p>© 2025 Ironclad Analytics Group. All rights reserved.</p>
   </footer>
 </body>
 </html>

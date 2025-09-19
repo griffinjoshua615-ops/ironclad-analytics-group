@@ -1,19 +1,18 @@
 /*
- * Stylesheet for the Ironclad Analytics Group website refresh.
+ * Updated stylesheet for the Ironclad Analytics Group website.
  *
- * This file defines the look and feel for the new portfolio and testimonials
- * sections along with general layout improvements. The palette and layout
- * choices are intentionally simple, ensuring the focus stays on your work
- * rather than ornate design flourishes. Feel free to tweak the variables
- * defined below to better match your brand guidelines.
+ * This file defines a refreshed colour palette to align with the new logo
+ * and introduces flexible layout rules for the navigation, services,
+ * portfolio and contact pages. Components are kept minimal and clean so
+ * your work can take centre stage.
  */
 
 /* Colour palette variables */
 :root {
-  --primary-color: #0a64a4;
-  --secondary-color: #07689f;
-  --accent-color: #f5f5f5;
-  --text-color: #333;
+  --primary-color: #0a2e50;      /* deep navy */
+  --secondary-color: #0f7799;    /* teal accent */
+  --accent-color: #f2f7fb;       /* light background */
+  --text-color: #1f2933;         /* dark grey for readability */
 }
 
 * {
@@ -25,6 +24,7 @@ body {
   font-family: Arial, sans-serif;
   color: var(--text-color);
   line-height: 1.6;
+  background: white;
 }
 
 /* Navigation bar */
@@ -32,13 +32,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--primary-color);
   padding: 1rem 2rem;
 }
 
-.navbar .logo {
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: white;
+.navbar .logo img {
+  height: 40px;
+  width: auto;
 }
 
 .navbar .nav-links {
@@ -50,7 +50,7 @@ body {
 }
 
 .navbar .nav-links a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   transition: opacity 0.3s ease;
@@ -60,7 +60,7 @@ body {
   opacity: 0.8;
 }
 
-/* Header area (hero) */
+/* Hero header (used on the home page) */
 header {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
@@ -70,24 +70,22 @@ header {
   text-align: center;
   padding: 4rem 2rem;
 }
-
 .hero h1 {
   font-size: 2.5rem;
   margin: 0 0 0.5rem;
 }
-
 .hero p {
   font-size: 1.25rem;
   margin: 0 auto 1.5rem;
   max-width: 600px;
 }
-
 .hero-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
+/* Buttons */
 .btn {
   display: inline-block;
   background: white;
@@ -115,81 +113,76 @@ header {
   padding: 3rem 2rem;
   text-align: center;
 }
-
 .services h2 {
   margin-bottom: 2rem;
 }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
-
 .service {
   padding: 1.5rem;
   background: var(--accent-color);
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
-
 .service h3 {
   margin-top: 0;
 }
 
-/* Featured work section */
+/* Featured work and portfolio grid */
 .featured-work {
-  background: #fafafa;
+  background: #f8fafc;
   padding: 3rem 2rem;
   text-align: center;
 }
-
 .featured-work h2 {
   margin-bottom: 2rem;
 }
-
-.work-grid {
+.work-grid,
+.portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
+  padding: 3rem 2rem;
 }
-
-.work-item {
+.work-item,
+.portfolio-item {
   background: var(--accent-color);
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
-
-.work-image {
-  height: 150px;
-  background: #dfe7f4;
-  margin-bottom: 1rem;
+.work-image,
+.portfolio-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 6px;
+  margin-bottom: 1rem;
 }
 
-/* Testimonials section */
+/* Testimonials */
 .testimonials {
   padding: 3rem 2rem;
   text-align: center;
 }
-
 .testimonial-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
-
 .testimonial-list blockquote {
   background: var(--accent-color);
   padding: 1.5rem;
   border-radius: 8px;
   font-style: italic;
-  position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   margin: 0;
+  position: relative;
 }
-
 .testimonial-list cite {
   display: block;
   margin-top: 0.5rem;
@@ -197,51 +190,55 @@ header {
   color: var(--primary-color);
 }
 
-/* Contact section */
+/* Contact callout (home page) */
 .contact {
   background: var(--primary-color);
   color: white;
   text-align: center;
   padding: 3rem 2rem;
 }
-
 .contact a.btn {
   background: white;
   color: var(--primary-color);
 }
 
-/* Portfolio page specific styles */
+/* Portfolio and contact hero sections share the same gradient */
 .portfolio-hero {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
   text-align: center;
   padding: 3rem 2rem;
 }
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 3rem 2rem;
+.portfolio-hero h1 {
+  margin-top: 0;
 }
 
-.portfolio-item {
-  background: var(--accent-color);
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+/* Form styles for contact page */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  text-align: left;
 }
-
-.portfolio-image {
-  height: 180px;
-  background: #dfe7f4;
+.form-field {
   margin-bottom: 1rem;
-  border-radius: 6px;
+}
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
 }
 
 /* Footer */
 footer {
-  background: #0a4d78;
+  background: #031f3c;
   color: white;
   text-align: center;
   padding: 1rem;

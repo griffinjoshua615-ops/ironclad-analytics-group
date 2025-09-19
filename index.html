@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ironclad Analytics Group | Digital, Data &amp; Design</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; script-src 'self'; style-src 'self';" />
+  <!-- Security policies to help protect against common attacks -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Site navigation -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Ironclad Analytics Group logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero section -->
   <header>
-    <nav class="navbar">
-      <div class="logo">Ironclad Analytics</div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
     <div class="hero">
       <h1>Unlock Your Digital, Data &amp; Design Potential</h1>
       <p>
@@ -26,13 +33,14 @@
         experiences.
       </p>
       <div class="hero-buttons">
-        <a class="btn" href="#services">Our Services</a>
-        <a class="btn btn-secondary" href="portfolio.html">View Portfolio</a>
+        <a href="services.html" class="btn">Our Services</a>
+        <a href="portfolio.html" class="btn btn-secondary">View Portfolio</a>
       </div>
     </div>
   </header>
 
-  <section id="services" class="services">
+  <!-- Services overview -->
+  <section class="services">
     <h2>What We Do</h2>
     <div class="service-grid">
       <div class="service">
@@ -59,82 +67,82 @@
       <div class="service">
         <h3>Website Design &amp; Development</h3>
         <p>
-          Craft modern, responsive websites tailored to your brand’s identity
-          and business goals.
+          Craft modern, responsive websites tailored to your brand’s
+          identity and business goals.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- Featured work -->
   <section class="featured-work">
     <h2>Featured Work</h2>
     <div class="work-grid">
       <div class="work-item">
-        <img src="sales_comparison.png" alt="Sales Comparison Chart" class="work-image" />
-        <h4>Project One</h4>
+        <img class="work-image" src="sales_comparison.png" alt="Sales Comparison Dashboard" />
+        <h3>Sales Comparison Dashboard</h3>
         <p>
-          A sample project demonstrating our ability to combine design and
-          analytics into a cohesive experience.
+          A dynamic dashboard that compares quarterly sales performance across
+          multiple products and regions, empowering executives to spot growth
+          opportunities at a glance.
         </p>
       </div>
       <div class="work-item">
-        <img src="revenue_scenarios.png" alt="Revenue Scenarios Forecast" class="work-image" />
-        <h4>Project Two</h4>
+        <img class="work-image" src="revenue_scenarios.png" alt="Revenue Scenarios Forecast" />
+        <h3>Revenue Scenarios Forecast</h3>
         <p>
-          A sample project demonstrating our ability to combine design and
-          analytics into a cohesive experience.
+          An advanced forecasting tool that models best‑, expected‑ and
+          worst‑case revenue outcomes, enabling data‑driven strategic planning.
         </p>
       </div>
       <div class="work-item">
-        <img src="conversion_funnel_horizontal.png" alt="Conversion Funnel Analysis" class="work-image" />
-        <h4>Project Three</h4>
+        <img class="work-image" src="conversion_funnel_horizontal.png" alt="Conversion Funnel Analysis" />
+        <h3>Conversion Funnel Analysis</h3>
         <p>
-          A sample project demonstrating our ability to combine design and
-          analytics into a cohesive experience.
+          A streamlined dashboard visualising user drop‑off at each funnel
+          stage, helping teams optimise their marketing and product
+          experiences to maximise conversions.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- Testimonials -->
   <section id="testimonials" class="testimonials">
     <h2>Testimonials</h2>
     <div class="testimonial-list">
       <blockquote>
-        <p>
-          “Ironclad Analytics delivered a beautifully designed, data‑driven
-          website that helped us increase conversions by 35%.”
-        </p>
+        “Ironclad Analytics delivered a beautifully designed, data‑driven
+        website that helped us increase conversions by 35%.”
         <cite>— Alex Johnson, CEO of Acme Corp.</cite>
       </blockquote>
       <blockquote>
-        <p>
-          “Their expertise in analytics and web design made all the
-          difference. Our dashboards are now easy to use and stunning.”
-        </p>
+        “Their expertise in analytics and web design made all the
+        difference. Our dashboards are now easy to use and stunning.”
         <cite>— Maria Rodriguez, Head of Operations at BlueWave Analytics.</cite>
       </blockquote>
       <blockquote>
-        <p>
-          “The team at Ironclad combines technical acumen with creative
-          flair. Our new site stands out and delivers results.”
-        </p>
+        “The team at Ironclad combines technical acumen with creative
+        flair. Our new site stands out and delivers results.”
         <cite>— David Thompson, Founder of Skyline Innovations.</cite>
       </blockquote>
     </div>
   </section>
 
-  <section id="contact" class="contact">
+  <!-- Contact call to action -->
+  <section class="contact">
     <h2>Get In Touch</h2>
     <p>
       Ready to transform your digital presence? Let’s talk about your
       project.
     </p>
-    <a class="btn" href="mailto:info@ironcladanalytics.com">Contact Us</a>
-    <p>Or call us at <a href="tel:9128370716">912-837-0716</a></p>
+    <a href="contact.html" class="btn">Contact Us</a>
+    <p>Or call us at <a href="tel:9128370716">912‑837‑0716</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Ironclad Analytics Group. All rights reserved.</p>
+    <p>© 2025 Ironclad Analytics Group. All rights reserved.</p>
   </footer>
 </body>
 </html>
