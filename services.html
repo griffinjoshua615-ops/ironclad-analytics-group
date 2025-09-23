@@ -1,117 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ironclad Analytics Group | Services</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Ironclad Analytics Group logo" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ironclad Analytics Group | Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0a2e50',
+              secondary: '#0f7799',
+              accent: '#f2f2f2'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-sans leading-relaxed text-gray-800">
+    <!-- Navigation (same as index) -->
+    <nav class="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        <a href="index.html" class="text-2xl font-bold text-primary">
+          Ironclad Analytics
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+          <li><a href="services.html" class="hover:text-secondary">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-secondary">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- Services page banner -->
-  <header class="portfolio-hero">
-    <h1>Our Services</h1>
-    <p>
-      From data pipelines to pixel‑perfect design, Ironclad offers an
-      integrated suite of services that turn information into impact.
-    </p>
-  </header>
+    <!-- Page hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary to-secondary text-white text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Our Services</h1>
+        <p class="text-lg md:text-xl">
+          From data pipelines to pixel‑perfect design, Ironclad offers an integrated
+          suite of services that turn information into impact.
+        </p>
+      </div>
+    </section>
 
-  <!-- Analytics Consulting -->
-  <section class="services">
-    <div class="service">
-      <h2>Analytics Consulting</h2>
-      <p>
-        We help organisations harness the full value of their data. Whether
-        you’re just starting to collect metrics or looking to optimise an
-        existing stack, our consultants design and implement modern analytics
-        ecosystems.
-      </p>
-      <ul>
-        <li>Data strategy &amp; architecture</li>
-        <li>ETL pipeline development</li>
-        <li>Custom reporting &amp; KPI frameworks</li>
-        <li>Training and enablement</li>
-      </ul>
-    </div>
+    <!-- Analytics Consulting -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-primary mb-4">Analytics Consulting</h2>
+        <p class="mb-6 text-gray-700">
+          We help organisations harness the full value of their data — whether
+          you’re just starting to collect metrics or optimising an existing
+          stack, our consultants design and implement modern analytics
+          ecosystems.
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>Data strategy &amp; architecture</li>
+          <li>ETL pipeline development</li>
+          <li>Custom reporting &amp; KPI frameworks</li>
+          <li>Training &amp; enablement</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Financial Modeling -->
-    <div class="service">
-      <h2>Financial Modeling</h2>
-      <p>
-        Our financial modeling services support your fundraising, valuation
-        and strategic planning efforts. We build models that are robust,
-        transparent and tailored to your specific industry and needs.
-      </p>
-      <ul>
-        <li>Scenario and sensitivity analysis</li>
-        <li>Valuation models</li>
-        <li>Operational forecasting</li>
-        <li>Investor pitch decks</li>
-      </ul>
-    </div>
+    <!-- Dashboard Templates -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-primary mb-4">Dashboard Templates</h2>
+        <p class="mb-6 text-gray-700">
+          Impress stakeholders with beautiful, interactive dashboards. Our
+          templates let you plug into data sources and start telling stories
+          instantly.
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>Data visualisation &amp; storytelling</li>
+          <li>Modular components for charts, tables &amp; KPIs</li>
+          <li>Responsive designs for any device</li>
+          <li>Source‑controlled via Git &amp; versioned</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Dashboards & Templates -->
-    <div class="service">
-      <h2>Dashboards &amp; Templates</h2>
-      <p>
-        Jumpstart your analytics initiatives with our ready‑to‑use Tableau
-        and Power BI templates. Each template comes with source files and
-        documentation so you can customise them quickly.
-      </p>
-      <ul>
-        <li>Sales performance dashboards</li>
-        <li>Marketing funnel analytics</li>
-        <li>Financial health reporting</li>
-        <li>Bespoke dashboard design</li>
-      </ul>
-    </div>
+    <!-- Financial Modelling -->
+    <section class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-primary mb-4">Financial Modelling</h2>
+        <p class="mb-6 text-gray-700">
+          Our financial modelling services support your fundraising, valuation and
+          strategic planning efforts. We build models that are robust,
+          transparent and tailored to your specific industry and needs.
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>Scenario &amp; sensitivity analysis</li>
+          <li>Value drivers &amp; KPI modelling</li>
+          <li>Operational &amp; due diligence support</li>
+          <li>Automated forecasting tools</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Website Design & Development -->
-    <div class="service">
-      <h2>Website Design &amp; Development</h2>
-      <p>
-        We craft modern, responsive websites that reflect your brand and
-        drive conversions. Our designers and developers work hand‑in‑hand
-        with our analytics team to ensure every design decision is informed
-        by data.
-      </p>
-      <ul>
-        <li>User experience &amp; interface design</li>
-        <li>CMS implementation (WordPress, Webflow, custom)</li>
-        <li>Performance optimisation &amp; SEO</li>
-        <li>Data‑driven design &amp; A/B testing</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Web Design & Development -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-primary mb-4">Web Design &amp; Development</h2>
+        <p class="mb-6 text-gray-700">
+          Elevate your digital presence with websites that feel modern and
+          premium. We combine aesthetics with accessibility and performance to
+          create memorable experiences.
+        </p>
+        <ul class="list-disc pl-6 space-y-2 text-gray-700">
+          <li>User‑centred research &amp; UI/UX design</li>
+          <li>Responsive layouts &amp; animations</li>
+          <li>SEO‑ready &amp; accessibility‑compliant</li>
+          <li>CMS integration &amp; content strategy</li>
+        </ul>
+      </div>
+    </section>
 
-  <!-- Why choose us -->
-  <section class="services">
-    <h2>Why Choose Us?</h2>
-    <p>
-      What sets Ironclad apart is our commitment to evidence‑based design.
-      We don’t just build beautiful things—we build solutions that work. By
-      combining deep analytical insights with cutting‑edge design, we create
-      experiences that convert, inform and inspire.
-    </p>
-  </section>
+    <!-- Call to action -->
+    <section class="py-16 bg-primary text-white text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Ready to unlock the value hidden in your data?
+        </h2>
+        <p class="mb-8 text-lg md:text-xl">
+          Get in touch to schedule a free consultation and explore how we can
+          help your business.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-block px-8 py-4 bg-white text-primary rounded-md font-semibold hover:bg-gray-200 transition duration-200"
+          >Contact Us</a
+        >
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Ironclad Analytics Group. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="mb-4 md:mb-0">
+          &copy; 2025 Ironclad Analytics Group. All rights reserved.
+        </p>
+        <ul class="flex space-x-4">
+          <li>
+            <a href="#" class="hover:text-secondary">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-secondary">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>

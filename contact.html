@@ -1,84 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ironclad Analytics Group | Contact</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Ironclad Analytics Group logo" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Contact hero -->
-  <header class="portfolio-hero">
-    <h1>Contact Us</h1>
-    <p>Let’s discuss how we can help you unlock your digital and data potential.</p>
-  </header>
-
-  <!-- Contact form and information -->
-  <section class="services">
-    <h2>Send Us a Message</h2>
-    <p>
-      Fill out the form below or reach us directly at
-      <a href="mailto:hello@ironcladanalytics.com">hello@ironcladanalytics.com</a>.
-      We respond to all enquiries within one business day.
-    </p>
-    <!-- Simple contact form (non-functional) -->
-    <form action="#" method="POST" class="contact-form">
-      <div class="form-field">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ironclad Analytics Group | Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0a2e50',
+              secondary: '#0f7799',
+              accent: '#f2f2f2'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-sans leading-relaxed text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        <a href="index.html" class="text-2xl font-bold text-primary">
+          Ironclad Analytics
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+          <li><a href="services.html" class="hover:text-secondary">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-secondary">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
+        </ul>
       </div>
-      <div class="form-field">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-field">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" />
-      </div>
-      <div class="form-field">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+    </nav>
 
-    <h2>Share a Testimonial</h2>
-    <p>
-      If you’ve worked with us before, we’d love to hear your feedback. Your
-      testimonial helps us grow and helps prospective clients understand the
-      value we provide.
-    </p>
-    <p>
-      To submit a testimonial, simply email us at
-      <a href="mailto:testimonials@ironcladanalytics.com">testimonials@ironcladanalytics.com</a>
-      with your name, role and a few sentences about your experience. We’ll
-      review and publish your comments on our site.
-    </p>
-    <p>
-      You can also leave a public review on
-      <a href="https://www.google.com/search?q=Ironclad+Analytics+Group" target="_blank">Google</a>
-      or
-      <a href="https://www.linkedin.com/company/ironclad-analytics-group" target="_blank">LinkedIn</a>.
-    </p>
-  </section>
+    <!-- Page hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary to-secondary text-white text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Contact Us</h1>
+        <p class="text-lg md:text-xl">
+          We’d love to hear about your project and how we can help you succeed.
+        </p>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Ironclad Analytics Group. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- Contact form -->
+    <section class="py-16 bg-white">
+      <div class="max-w-xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-primary mb-6 text-center">
+          Get in Touch
+        </h2>
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-secondary focus:ring-secondary"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-secondary focus:ring-secondary"
+            />
+          </div>
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              rows="5"
+              required
+              class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-secondary focus:ring-secondary"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full px-6 py-3 bg-primary text-white rounded-md font-medium hover:bg-secondary transition duration-200"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="mb-4 md:mb-0">
+          &copy; 2025 Ironclad Analytics Group. All rights reserved.
+        </p>
+        <ul class="flex space-x-4">
+          <li>
+            <a href="#" class="hover:text-secondary">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-secondary">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>

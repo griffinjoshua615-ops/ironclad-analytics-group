@@ -1,148 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ironclad Analytics Group | Digital, Data &amp; Design</title>
-  <!-- Security policies to help protect against common attacks -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Site navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Ironclad Analytics Group logo" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ironclad Analytics Group | Digital, Data &amp; Design</title>
+    <!-- Tailwind CSS via CDN: utility‑first styling for rapid layout -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind configuration: extend with brand colours -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0a2e50',
+              secondary: '#0f7799',
+              accent: '#f2f2f2'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-sans leading-relaxed text-gray-800">
+    <!-- Navigation bar: fixed at the top with translucent background -->
+    <nav class="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        <a href="index.html" class="text-2xl font-bold text-primary">
+          Ironclad Analytics
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+          <li><a href="services.html" class="hover:text-secondary">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-secondary">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- Hero section -->
-  <header>
-    <div class="hero">
-      <h1>Unlock Your Digital, Data &amp; Design Potential</h1>
-      <p>
-        We transform complexity into compelling insights and memorable
-        experiences.
-      </p>
-      <div class="hero-buttons">
-        <a href="services.html" class="btn">Our Services</a>
-        <a href="portfolio.html" class="btn btn-secondary">View Portfolio</a>
+    <!-- Hero section: gradient background with decorative abstract image -->
+    <section class="pt-32 pb-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+      <!-- Decorative image layer -->
+      <div class="absolute inset-0 opacity-30">
+        <img
+          src="assets/hero-image.png"
+          alt="Abstract representation of analytics"
+          class="w-full h-full object-cover"
+        />
       </div>
-    </div>
-  </header>
+      <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+          Unlock Your Digital, Data &amp; Design Potential
+        </h1>
+        <p class="text-lg md:text-xl mb-8">
+          Transform complexity into compelling insights and memorable experiences
+          with Ironclad Analytics Group.
+        </p>
+        <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
+          <a
+            href="services.html"
+            class="px-6 py-3 bg-white text-primary rounded-md font-medium hover:bg-gray-200 transition duration-200 text-center"
+            >Our Services</a
+          >
+          <a
+            href="portfolio.html"
+            class="px-6 py-3 border border-white rounded-md font-medium hover:bg-white hover:text-primary transition duration-200 text-center"
+            >View Portfolio</a
+          >
+        </div>
+      </div>
+    </section>
 
-  <!-- Services overview -->
-  <section class="services">
-    <h2>What We Do</h2>
-    <div class="service-grid">
-      <div class="service">
-        <h3>Analytics Consulting</h3>
-        <p>
-          Design and implement end‑to‑end data solutions — from data
-          pipelines to dashboards.
-        </p>
+    <!-- Services overview: highlight core offerings -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">What We Do</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Analytics consulting card -->
+          <div
+            class="text-center p-6 rounded-lg shadow hover:shadow-lg transition duration-200"
+          >
+            <div class="mb-4 text-primary">
+              <!-- Heroicons outline: document icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M9 12h6m2 10H7a2 2 0 01-2-2V4a2 2 0 012-2h6l6 6v12a2 2 0 01-2 2z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Analytics Consulting</h3>
+            <p class="text-gray-600">
+              Uncover hidden value in your data pipelines to drive informed
+              decisions.
+            </p>
+          </div>
+          <!-- Dashboard templates card -->
+          <div
+            class="text-center p-6 rounded-lg shadow hover:shadow-lg transition duration-200"
+          >
+            <div class="mb-4 text-primary">
+              <!-- Chart bar icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Dashboard Templates</h3>
+            <p class="text-gray-600">
+              Beautifully crafted dashboards to visualise metrics at a glance.
+            </p>
+          </div>
+          <!-- Financial modelling card -->
+          <div
+            class="text-center p-6 rounded-lg shadow hover:shadow-lg transition duration-200"
+          >
+            <div class="mb-4 text-primary">
+              <!-- User circle icon representing modelling -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2s-3 1.343-3 3 1.343 3 3 3zm0 12c1.657 0 3-1.343 3-3v-1c0-1.657-1.343-3-3-3s-3 1.343-3 3v1c0 1.657 1.343 3 3 3z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Financial Modelling</h3>
+            <p class="text-gray-600">
+              Robust, transparent models tailored to your specific industry and
+              needs.
+            </p>
+          </div>
+          <!-- Web design card -->
+          <div
+            class="text-center p-6 rounded-lg shadow hover:shadow-lg transition duration-200"
+          >
+            <div class="mb-4 text-primary">
+              <!-- List icon representing websites -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12 mx-auto"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Web Design &amp; Development</h3>
+            <p class="text-gray-600">
+              Modern websites that are fast, accessible and conversion‑focused.
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="service">
-        <h3>Dashboard Templates</h3>
-        <p>
-          Industry‑ready Tableau and Power BI dashboards you can deploy in
-          minutes.
-        </p>
-      </div>
-      <div class="service">
-        <h3>Financial Modeling</h3>
-        <p>
-          Build scenario models and forecasts to support fundraising and
-          strategic planning.
-        </p>
-      </div>
-      <div class="service">
-        <h3>Website Design &amp; Development</h3>
-        <p>
-          Craft modern, responsive websites tailored to your brand’s
-          identity and business goals.
-        </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Featured work -->
-  <section class="featured-work">
-    <h2>Featured Work</h2>
-    <div class="work-grid">
-      <div class="work-item">
-        <img class="work-image" src="sales_comparison.png" alt="Sales Comparison Dashboard" />
-        <h3>Sales Comparison Dashboard</h3>
-        <p>
-          A dynamic dashboard that compares quarterly sales performance across
-          multiple products and regions, empowering executives to spot growth
-          opportunities at a glance.
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="mb-4 md:mb-0">
+          &copy; 2025 Ironclad Analytics Group. All rights reserved.
         </p>
+        <ul class="flex space-x-4">
+          <li>
+            <a href="#" class="hover:text-secondary">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-secondary">Terms of Service</a>
+          </li>
+        </ul>
       </div>
-      <div class="work-item">
-        <img class="work-image" src="revenue_scenarios.png" alt="Revenue Scenarios Forecast" />
-        <h3>Revenue Scenarios Forecast</h3>
-        <p>
-          An advanced forecasting tool that models best‑, expected‑ and
-          worst‑case revenue outcomes, enabling data‑driven strategic planning.
-        </p>
-      </div>
-      <div class="work-item">
-        <img class="work-image" src="conversion_funnel_horizontal.png" alt="Conversion Funnel Analysis" />
-        <h3>Conversion Funnel Analysis</h3>
-        <p>
-          A streamlined dashboard visualising user drop‑off at each funnel
-          stage, helping teams optimise their marketing and product
-          experiences to maximise conversions.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial-list">
-      <blockquote>
-        “Ironclad Analytics delivered a beautifully designed, data‑driven
-        website that helped us increase conversions by 35%.”
-        <cite>— Alex Johnson, CEO of Acme Corp.</cite>
-      </blockquote>
-      <blockquote>
-        “Their expertise in analytics and web design made all the
-        difference. Our dashboards are now easy to use and stunning.”
-        <cite>— Maria Rodriguez, Head of Operations at BlueWave Analytics.</cite>
-      </blockquote>
-      <blockquote>
-        “The team at Ironclad combines technical acumen with creative
-        flair. Our new site stands out and delivers results.”
-        <cite>— David Thompson, Founder of Skyline Innovations.</cite>
-      </blockquote>
-    </div>
-  </section>
-
-  <!-- Contact call to action -->
-  <section class="contact">
-    <h2>Get In Touch</h2>
-    <p>
-      Ready to transform your digital presence? Let’s talk about your
-      project.
-    </p>
-    <a href="contact.html" class="btn">Contact Us</a>
-    <p>Or call us at <a href="tel:9128370716">912‑837‑0716</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Ironclad Analytics Group. All rights reserved.</p>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

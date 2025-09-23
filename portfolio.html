@@ -1,65 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Ironclad Analytics Group</title>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self';" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="Ironclad Analytics Group logo" />
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ironclad Analytics Group | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0a2e50',
+              secondary: '#0f7799',
+              accent: '#f2f2f2'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="font-sans leading-relaxed text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+        <a href="index.html" class="text-2xl font-bold text-primary">
+          Ironclad Analytics
+        </a>
+        <ul class="hidden md:flex space-x-6">
+          <li><a href="index.html" class="hover:text-secondary">Home</a></li>
+          <li><a href="services.html" class="hover:text-secondary">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-secondary">Portfolio</a></li>
+          <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <!-- Portfolio hero -->
-  <header class="portfolio-hero">
-    <h1>Our Portfolio</h1>
-    <p>A selection of our favourite projects.</p>
-  </header>
+    <!-- Page hero -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-primary to-secondary text-white text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Our Work</h1>
+        <p class="text-lg md:text-xl">
+          A selection of recent projects that showcase our ability to translate
+          data into action.
+        </p>
+      </div>
+    </section>
 
-  <!-- Portfolio grid -->
-  <section class="portfolio-grid">
-    <div class="portfolio-item">
-      <img class="portfolio-image" src="sales_comparison.png" alt="Sales Comparison Dashboard" />
-      <h3>Sales Comparison Dashboard</h3>
-      <p>
-        A dynamic dashboard that compares quarterly sales performance across
-        multiple products and regions, empowering executives to spot growth
-        opportunities at a glance.
-      </p>
-    </div>
-    <div class="portfolio-item">
-      <img class="portfolio-image" src="revenue_scenarios.png" alt="Revenue Scenarios Forecast" />
-      <h3>Revenue Scenarios Forecast</h3>
-      <p>
-        An advanced forecasting tool that models best‑, expected‑ and
-        worst‑case revenue outcomes, enabling data‑driven strategic planning.
-      </p>
-    </div>
-    <div class="portfolio-item">
-      <img class="portfolio-image" src="conversion_funnel_horizontal.png" alt="Conversion Funnel Analysis" />
-      <h3>Conversion Funnel Analysis</h3>
-      <p>
-        A streamlined dashboard visualising user drop‑off at each funnel
-        stage, helping teams optimise their marketing and product
-        experiences to maximise conversions.
-      </p>
-    </div>
-  </section>
+    <!-- Portfolio grid -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-200">
+            <div class="h-40 bg-primary flex items-center justify-center">
+              <span class="text-white text-3xl font-bold">01</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Manufacturing Data Platform
+              </h3>
+              <p class="text-gray-700 mb-4">
+                Built a modern data platform for a global manufacturer, enabling
+                real‑time analytics across supply chain, production and quality.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium hover:text-secondary"
+                >Read more &rarr;</a
+              >
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-200">
+            <div class="h-40 bg-secondary flex items-center justify-center">
+              <span class="text-white text-3xl font-bold">02</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">SaaS Financial Model</h3>
+              <p class="text-gray-700 mb-4">
+                Developed a transparent, scenario‑driven model that helped a
+                growing SaaS startup raise Series A funding.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium hover:text-secondary"
+                >Read more &rarr;</a
+              >
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-200">
+            <div class="h-40 bg-primary flex items-center justify-center">
+              <span class="text-white text-3xl font-bold">03</span>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">
+                Ecommerce Dashboard Suite
+              </h3>
+              <p class="text-gray-700 mb-4">
+                Delivered a suite of interactive dashboards for an ecommerce
+                retailer to monitor marketing performance and customer lifetime
+                value.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium hover:text-secondary"
+                >Read more &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>© 2025 Ironclad Analytics Group. All rights reserved.</p>
-  </footer>
-</body>
+    <!-- Call to action -->
+    <section class="py-16 bg-primary text-white text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Let’s create something impactful together
+        </h2>
+        <p class="mb-8 text-lg md:text-xl">
+          We're ready to help you transform your data into a competitive edge.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-block px-8 py-4 bg-white text-primary rounded-md font-semibold hover:bg-gray-200 transition duration-200"
+          >Get in Touch</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-8">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p class="mb-4 md:mb-0">
+          &copy; 2025 Ironclad Analytics Group. All rights reserved.
+        </p>
+        <ul class="flex space-x-4">
+          <li>
+            <a href="#" class="hover:text-secondary">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#" class="hover:text-secondary">Terms of Service</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
