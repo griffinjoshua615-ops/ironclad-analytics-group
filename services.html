@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ironclad Analytics Group | Services</title>
+    <meta name="description" content="Ironclad Analytics Group helps businesses turn data into action through analytics, dashboards, forecasting, and digital strategy." />
+    <title>Ironclad Analytics Group | Digital, Data & Design</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -12,148 +13,305 @@
             colors: {
               primary: '#0a2e50',
               secondary: '#0f7799',
-              accent: '#f2f2f2'
+              accent: '#f2f2f2',
+              skysoft: '#dff3ff'
+            },
+            boxShadow: {
+              soft: '0 20px 45px rgba(10, 46, 80, 0.12)'
             }
           }
         }
       }
     </script>
   </head>
-  <body class="font-sans leading-relaxed text-gray-800">
-    <!-- Navigation (same as index) -->
-    <nav class="fixed top-0 inset-x-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
-      <div class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
-        <a href="index.html" class="text-2xl font-bold text-primary">
-          Ironclad Analytics
-        </a>
-        <ul class="hidden md:flex space-x-6">
-          <li><a href="index.html" class="hover:text-secondary">Home</a></li>
-          <li><a href="services.html" class="hover:text-secondary">Services</a></li>
-          <li><a href="portfolio.html" class="hover:text-secondary">Portfolio</a></li>
-          <li><a href="contact.html" class="hover:text-secondary">Contact</a></li>
-        </ul>
+  <body class="font-sans leading-relaxed text-gray-800 bg-slate-50">
+    <nav class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/80 backdrop-blur-md">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <a href="index.html" class="text-2xl font-black tracking-tight text-primary">Ironclad Analytics</a>
+
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="index.html" class="font-medium text-slate-700 transition hover:text-secondary">Home</a>
+          <a href="services.html" class="font-medium text-slate-700 transition hover:text-secondary">Services</a>
+          <a href="portfolio.html" class="font-medium text-slate-700 transition hover:text-secondary">Portfolio</a>
+          <a href="contact.html" class="font-medium text-slate-700 transition hover:text-secondary">Contact</a>
+        </div>
+
+        <a href="contact.html" class="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition hover:bg-secondary md:inline-flex">Book a consultation</a>
       </div>
     </nav>
 
-    <!-- Page hero -->
-    <section class="pt-32 pb-16 bg-gradient-to-br from-primary to-secondary text-white text-center">
-      <div class="max-w-4xl mx-auto px-6">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Our Services</h1>
-        <p class="text-lg md:text-xl">
-          From data pipelines to pixel‑perfect design, Ironclad offers an integrated
-          suite of services that turn information into impact.
-        </p>
-      </div>
-    </section>
+    <main>
+      <section class="relative overflow-hidden bg-gradient-to-br from-primary via-sky-900 to-secondary pt-32 text-white">
+        <div class="absolute inset-0 opacity-20">
+          <div class="h-full w-full bg-[radial-gradient(circle_at_top_left,_rgba(255,255,255,0.24),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(25,199,224,0.18),_transparent_34%)]"></div>
+        </div>
 
-    <!-- Analytics Consulting -->
-    <section class="py-16 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-primary mb-4">Analytics Consulting</h2>
-        <p class="mb-6 text-gray-700">
-          We help organisations harness the full value of their data — whether
-          you’re just starting to collect metrics or optimising an existing
-          stack, our consultants design and implement modern analytics
-          ecosystems.
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>Data strategy &amp; architecture</li>
-          <li>ETL pipeline development</li>
-          <li>Custom reporting &amp; KPI frameworks</li>
-          <li>Training &amp; enablement</li>
-        </ul>
-      </div>
-    </section>
+        <div class="relative mx-auto max-w-7xl px-6 pb-20 pt-8">
+          <div class="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <div class="mb-6 inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-sky-100">
+                Data strategy • dashboards • digital growth
+              </div>
+              <h1 class="max-w-xl text-4xl font-black leading-tight md:text-6xl">
+                Turn complexity into clarity.
+              </h1>
+              <p class="mt-6 max-w-xl text-lg text-sky-100 md:text-xl">
+                We help founders, teams, and growth-focused businesses convert raw data into clear decisions, high-performing dashboards, and memorable digital experiences.
+              </p>
 
-    <!-- Dashboard Templates -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-primary mb-4">Dashboard Templates</h2>
-        <p class="mb-6 text-gray-700">
-          Impress stakeholders with beautiful, interactive dashboards. Our
-          templates let you plug into data sources and start telling stories
-          instantly.
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>Data visualisation &amp; storytelling</li>
-          <li>Modular components for charts, tables &amp; KPIs</li>
-          <li>Responsive designs for any device</li>
-          <li>Source‑controlled via Git &amp; versioned</li>
-        </ul>
-      </div>
-    </section>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a href="services.html" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-primary transition hover:bg-slate-100">Explore services</a>
+                <a href="portfolio.html" class="inline-flex items-center justify-center rounded-full border border-white/40 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10">View our work</a>
+              </div>
 
-    <!-- Financial Modelling -->
-    <section class="py-16 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-primary mb-4">Financial Modelling</h2>
-        <p class="mb-6 text-gray-700">
-          Our financial modelling services support your fundraising, valuation and
-          strategic planning efforts. We build models that are robust,
-          transparent and tailored to your specific industry and needs.
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>Scenario &amp; sensitivity analysis</li>
-          <li>Value drivers &amp; KPI modelling</li>
-          <li>Operational &amp; due diligence support</li>
-          <li>Automated forecasting tools</li>
-        </ul>
-      </div>
-    </section>
+              <div class="mt-10 flex flex-wrap items-center gap-6 text-sm text-sky-100">
+                <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span> Trusted by scaling teams</span>
+                <span class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span> Strategy + design + insight</span>
+              </div>
+            </div>
 
-    <!-- Web Design & Development -->
-    <section class="py-16 bg-gray-50">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-primary mb-4">Web Design &amp; Development</h2>
-        <p class="mb-6 text-gray-700">
-          Elevate your digital presence with websites that feel modern and
-          premium. We combine aesthetics with accessibility and performance to
-          create memorable experiences.
-        </p>
-        <ul class="list-disc pl-6 space-y-2 text-gray-700">
-          <li>User‑centred research &amp; UI/UX design</li>
-          <li>Responsive layouts &amp; animations</li>
-          <li>SEO‑ready &amp; accessibility‑compliant</li>
-          <li>CMS integration &amp; content strategy</li>
-        </ul>
-      </div>
-    </section>
+            <div class="relative">
+              <div class="rounded-[28px] border border-white/20 bg-white/10 p-5 shadow-soft backdrop-blur-sm">
+                <div class="rounded-[20px] bg-white p-6 text-slate-900">
+                  <div class="mb-5 flex items-center justify-between">
+                    <div>
+                      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">Growth dashboard</p>
+                      <h2 class="mt-2 text-2xl font-bold text-primary">Q3 performance</h2>
+                    </div>
+                    <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-700">+28.4%</span>
+                  </div>
 
-    <!-- Call to action -->
-    <section class="py-16 bg-primary text-white text-center">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">
-          Ready to unlock the value hidden in your data?
-        </h2>
-        <p class="mb-8 text-lg md:text-xl">
-          Get in touch to schedule a free consultation and explore how we can
-          help your business.
-        </p>
-        <a
-          href="contact.html"
-          class="inline-block px-8 py-4 bg-white text-primary rounded-md font-semibold hover:bg-gray-200 transition duration-200"
-          >Contact Us</a
-        >
-      </div>
-    </section>
+                  <div class="space-y-5">
+                    <div>
+                      <div class="mb-2 flex items-center justify-between text-sm text-slate-500">
+                        <span>Revenue</span>
+                        <span>$2.4M</span>
+                      </div>
+                      <div class="h-2.5 rounded-full bg-slate-200">
+                        <div class="h-2.5 w-[82%] rounded-full bg-gradient-to-r from-secondary to-emerald-500"></div>
+                      </div>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="bg-primary text-white py-8">
-      <div
-        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
-      >
-        <p class="mb-4 md:mb-0">
-          &copy; 2025 Ironclad Analytics Group. All rights reserved.
-        </p>
-        <ul class="flex space-x-4">
-          <li>
-            <a href="#" class="hover:text-secondary">Privacy Policy</a>
-          </li>
-          <li>
-            <a href="#" class="hover:text-secondary">Terms of Service</a>
-          </li>
-        </ul>
+                    <div>
+                      <div class="mb-2 flex items-center justify-between text-sm text-slate-500">
+                        <span>Pipeline conversion</span>
+                        <span>64%</span>
+                      </div>
+                      <div class="h-2.5 rounded-full bg-slate-200">
+                        <div class="h-2.5 w-[64%] rounded-full bg-gradient-to-r from-primary to-cyan-500"></div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-3 pt-2">
+                      <div class="rounded-2xl bg-slate-100 p-3">
+                        <div class="text-xs uppercase tracking-wide text-slate-500">Users</div>
+                        <div class="mt-2 text-xl font-bold text-primary">18.6k</div>
+                      </div>
+                      <div class="rounded-2xl bg-slate-100 p-3">
+                        <div class="text-xs uppercase tracking-wide text-slate-500">CAC</div>
+                        <div class="mt-2 text-xl font-bold text-primary">$320</div>
+                      </div>
+                      <div class="rounded-2xl bg-slate-100 p-3">
+                        <div class="text-xs uppercase tracking-wide text-slate-500">ROI</div>
+                        <div class="mt-2 text-xl font-bold text-primary">3.8x</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-6">
+        <div class="mx-auto grid max-w-6xl gap-4 px-6 md:grid-cols-4">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-center">
+            <div class="text-3xl font-black text-primary">80+</div>
+            <div class="text-sm text-slate-600">data projects delivered</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-center">
+            <div class="text-3xl font-black text-primary">4x</div>
+            <div class="text-sm text-slate-600">faster reporting cycles</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-center">
+            <div class="text-3xl font-black text-primary">30%</div>
+            <div class="text-sm text-slate-600">average conversion lift</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4 text-center">
+            <div class="text-3xl font-black text-primary">24/7</div>
+            <div class="text-sm text-slate-600">decision support</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="mx-auto mb-12 max-w-2xl text-center">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Why teams choose us</p>
+            <h2 class="mt-3 text-3xl font-black text-primary md:text-5xl">Strategy, insight, and design in one partner.</h2>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-skysoft text-2xl">📊</div>
+              <h3 class="text-2xl font-bold text-primary">Analytics that guide action</h3>
+              <p class="mt-4 text-slate-600">We turn scattered metrics into clear narratives and decision-ready dashboards your leadership team can trust.</p>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-skysoft text-2xl">📈</div>
+              <h3 class="text-2xl font-bold text-primary">Forecasting with confidence</h3>
+              <p class="mt-4 text-slate-600">We build scenario planning, financial models, and performance views that help teams plan smarter and move faster.</p>
+            </div>
+
+            <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+              <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-skysoft text-2xl">🎨</div>
+              <h3 class="text-2xl font-bold text-primary">Web experiences that convert</h3>
+              <p class="mt-4 text-slate-600">From branding to UX to polished web presence, we create digital experiences that look premium and perform.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-slate-100 py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">What we do</p>
+              <h2 class="mt-2 text-3xl font-black text-primary md:text-4xl">Services built for ambitious teams.</h2>
+            </div>
+            <a href="services.html" class="inline-flex items-center font-semibold text-primary transition hover:text-secondary">See all services →</a>
+          </div>
+
+          <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <div class="mb-4 text-3xl">📊</div>
+              <h3 class="text-xl font-bold text-primary">Analytics Consulting</h3>
+              <p class="mt-3 text-slate-600">Uncover hidden value in your data, identify blockers, and turn reporting into a growth engine.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <div class="mb-4 text-3xl">📈</div>
+              <h3 class="text-xl font-bold text-primary">Dashboard Design</h3>
+              <p class="mt-3 text-slate-600">Create executive dashboards, KPI systems, and monitoring views that simplify decisions.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <div class="mb-4 text-3xl">💼</div>
+              <h3 class="text-xl font-bold text-primary">Financial Modeling</h3>
+              <p class="mt-3 text-slate-600">Build investor-ready models and scenario planning frameworks to support growth and funding.</p>
+            </div>
+            <div class="rounded-3xl bg-white p-6 shadow-soft">
+              <div class="mb-4 text-3xl">💻</div>
+              <h3 class="text-xl font-bold text-primary">Web Design & Development</h3>
+              <p class="mt-3 text-slate-600">Modern, conversion-focused web experiences that combine clarity, brand, and business goals.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <div class="mb-12 text-center">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Impact</p>
+            <h2 class="mt-2 text-3xl font-black text-primary md:text-5xl">Selected work and outcomes.</h2>
+          </div>
+
+          <div class="grid gap-8 lg:grid-cols-3">
+            <article class="rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+              <div class="bg-gradient-to-br from-sky-100 to-slate-100 p-8">
+                <div class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Manufacturing</div>
+                <h3 class="mt-4 text-2xl font-bold text-primary">Manufacturing Data Platform</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600">Modernized operations reporting for a global manufacturer, improving visibility across factory performance and maintenance.</p>
+                <div class="mt-6 flex items-center justify-between text-sm">
+                  <span class="font-semibold text-primary">+42% reporting efficiency</span>
+                  <a href="case-study1.html" class="font-semibold text-secondary">Read case study</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+              <div class="bg-gradient-to-br from-cyan-100 to-sky-100 p-8">
+                <div class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">SaaS</div>
+                <h3 class="mt-4 text-2xl font-bold text-primary">SaaS Financial Model</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600">Built a scenario-based financial model to support fundraising, flexible planning, and investor discussion.</p>
+                <div class="mt-6 flex items-center justify-between text-sm">
+                  <span class="font-semibold text-primary">Series A readiness</span>
+                  <a href="case-study2.html" class="font-semibold text-secondary">Read case study</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="rounded-3xl overflow-hidden border border-slate-200 bg-white shadow-soft">
+              <div class="bg-gradient-to-br from-slate-100 to-sky-50 p-8">
+                <div class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Revenue</div>
+                <h3 class="mt-4 text-2xl font-bold text-primary">Revenue Dashboard Redesign</h3>
+              </div>
+              <div class="p-6">
+                <p class="text-slate-600">Rebuilt a fragmented analytics suite around clear KPIs, better signal-to-noise ratios, and executive readability.</p>
+                <div class="mt-6 flex items-center justify-between text-sm">
+                  <span class="font-semibold text-primary">+3.2x faster insight cycles</span>
+                  <a href="case-study3.html" class="font-semibold text-secondary">Read case study</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-primary py-20 text-white">
+        <div class="mx-auto max-w-5xl px-6 text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-200">Client feedback</p>
+          <h2 class="mt-3 text-3xl font-black md:text-5xl">“The work gave us clarity, confidence, and momentum.”</h2>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <blockquote class="rounded-3xl border border-white/10 bg-white/5 p-6 text-left">
+              <p class="text-lg text-sky-100">“Ironclad transformed our reporting into a decision-making tool. The difference was immediate.”</p>
+              <footer class="mt-4 text-sm font-semibold text-white">— COO, SaaS company</footer>
+            </blockquote>
+            <blockquote class="rounded-3xl border border-white/10 bg-white/5 p-6 text-left">
+              <p class="text-lg text-sky-100">“Their financial model helped us sharpen our strategy and present a stronger investor story.”</p>
+              <footer class="mt-4 text-sm font-semibold text-white">— Founder, scale-up</footer>
+            </blockquote>
+            <blockquote class="rounded-3xl border border-white/10 bg-white/5 p-6 text-left">
+              <p class="text-lg text-sky-100">“They combined strategic thinking with beautiful execution. The site and dashboards both felt premium.”</p>
+              <footer class="mt-4 text-sm font-semibold text-white">— Marketing lead, B2B brand</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20">
+        <div class="mx-auto max-w-5xl rounded-[32px] border border-slate-200 bg-white px-6 py-12 text-center shadow-soft md:px-12">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-secondary">Let’s build your next advantage</p>
+          <h2 class="mt-4 text-3xl font-black text-primary md:text-5xl">Need a sharper strategy, cleaner data, or a stronger digital presence?</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-lg text-slate-600">We help businesses turn their signals into momentum — with a practical, design-led approach.</p>
+          <div class="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
+            <a href="contact.html" class="inline-flex items-center justify-center rounded-full bg-primary px-7 py-3.5 text-base font-semibold text-white transition hover:bg-secondary">Talk to us</a>
+            <a href="portfolio.html" class="inline-flex items-center justify-center rounded-full border border-slate-300 px-7 py-3.5 text-base font-semibold text-primary transition hover:bg-slate-100">View portfolio</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-200">
+      <div class="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
+        <div>
+          <div class="text-xl font-black text-white">Ironclad Analytics</div>
+          <p class="mt-2 text-sm text-slate-400">Digital, data & design strategy for modern businesses.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-6 text-sm">
+          <a href="index.html" class="transition hover:text-white">Home</a>
+          <a href="services.html" class="transition hover:text-white">Services</a>
+          <a href="portfolio.html" class="transition hover:text-white">Portfolio</a>
+          <a href="contact.html" class="transition hover:text-white">Contact</a>
+        </div>
       </div>
     </footer>
   </body>
 </html>
+"},{
