@@ -1,5 +1,5 @@
 """Generate the static Dokimos site (Tailwind CDN + Google Fonts). Run: python3 build_site.py"""
-import os, html
+import os, html, json
 
 OUT = os.path.dirname(os.path.abspath(__file__))
 EMAIL = "griffinjoshua615@gmail.com"
@@ -41,6 +41,7 @@ def head(title, desc, path):
 <meta property="og:title" content="{html.escape(title)}"><meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="website"><meta property="og:image" content="{SITE}/og-image.png"><meta property="og:url" content="{SITE}/{path}">
 <meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{{"@context":"https://schema.org","@graph":[{{"@type":"Organization","@id":"{SITE}/#org","name":"Dokimos","alternateName":"Dokimos LLC","url":"{SITE}/","logo":"{SITE}/og-image.png","slogan":"Judgment, proven.","description":"Dokimos writes down the judgment that is not in the manual, as tests with exact answers, and proves it. Verified expert judgment for AI labs, Army units and fleets.","email":"{EMAIL}","address":{{"@type":"PostalAddress","addressLocality":"Port Wentworth","addressRegion":"GA","addressCountry":"US"}},"founder":{{"@type":"Person","name":"Joshua Griffin"}},"knowsAbout":["expert-authored AI evaluation tasks","reinforcement learning environments","Class IX parts management","Army sustainment","PLL and shop stock judgment","deadline and NMC recovery"]}},{{"@type":"Service","name":"Dokimos Environments","provider":{{"@id":"{SITE}/#org"}},"serviceType":"Expert-authored tasks and environments for AI labs in tacit sustainment domains","url":"{SITE}/environments.html","areaServed":"US"}},{{"@type":"Service","name":"Dokimos Engine","provider":{{"@id":"{SITE}/#org"}},"serviceType":"Unit-level Class IX decision support gated by expert-authored tests","url":"{SITE}/engine.html","areaServed":"US"}},{{"@type":"Course","name":"Dokimos Course: PLL and Class IX readiness judgment","provider":{{"@id":"{SITE}/#org"}},"description":"A public, scheduled two-day class on PLL and Class IX readiness judgment for clerks, maintenance sergeants and leaders.","url":"{SITE}/course.html","offers":{{"@type":"Offer","price":"1250","priceCurrency":"USD","description":"per seat, eight seats per class"}}}}]}}</script>
 {TAILWIND}
 </head>
 <body class="bg-paper font-body text-stone antialiased">'''
@@ -67,7 +68,7 @@ FOOTER = f'''<footer class="border-t border-line bg-ink text-paper">
     <div class="text-sm"><p class="font-semibold text-gold">Lines</p>
       <ul class="mt-3 space-y-2 text-paper/80"><li><a class="hover:text-paper" href="environments.html">Dokimos Environments</a></li><li><a class="hover:text-paper" href="engine.html">Dokimos Engine</a></li><li><a class="hover:text-paper" href="course.html">Dokimos Course</a></li><li><a class="hover:text-paper" href="assets/Dokimos_Capability_Sheet_2026-10.pdf">Capability sheet (PDF)</a></li></ul></div>
     <div class="text-sm"><p class="font-semibold text-gold">Contact</p>
-      <ul class="mt-3 space-y-2 text-paper/80"><li>Port Wentworth, Georgia</li><li><a class="hover:text-paper" href="mailto:{EMAIL}">{EMAIL}</a></li><li><a class="hover:text-paper" href="contact.html">Contact form</a></li><li><a class="hover:text-paper" href="privacy.html">Privacy</a></li></ul>
+      <ul class="mt-3 space-y-2 text-paper/80"><li>Port Wentworth, Georgia</li><li><a class="hover:text-paper" href="mailto:{EMAIL}">{EMAIL}</a></li><li><a class="hover:text-paper" href="contact.html">Contact form</a></li><li><a class="hover:text-paper" href="faq.html">FAQ</a></li><li><a class="hover:text-paper" href="privacy.html">Privacy</a></li></ul>
       <p class="mt-6 text-xs text-paper/50">A service-disabled veteran-owned business. SBA VetCert in progress. Not affiliated with the U.S. Army.</p></div>
   </div>
   <div class="border-t border-paper/10"><div class="mx-auto max-w-6xl px-5 py-5 text-xs text-paper/50">&copy; 2026 Dokimos. All rights reserved.</div></div>
@@ -332,13 +333,38 @@ privacy_body = '''<main><section class="mx-auto max-w-3xl px-5 py-20"><div class
 <p class="text-sm">Last updated October 9, 2026.</p></div></section></main>'''
 page("privacy.html", "Privacy | Dokimos", "How the Dokimos site handles your information.", privacy_body, "")
 
+
+# --------------------------------------------------------------------- faq
+FAQ = [
+ ("What does Dokimos do?", "Dokimos writes down the judgment that is not in the manual, as tests with exact answers, and proves it. The output is three things: expert-authored tasks and environments for AI labs (Dokimos Environments), a decision tool for Army motor pools and fleets (Dokimos Engine), and a public class for PLL clerks and maintenance sergeants (Dokimos Course)."),
+ ("What is a judgment task?", "A single decision an experienced person makes that no written policy fully covers, written as a problem with one exact answer, a verifier that checks it automatically, and a short reason the crux is judgment rather than a rule. Example: deciding that an open requisition is dead because the part was superseded and received under a new number."),
+ ("Why do AI labs buy this?", "Frontier models now solve most tasks that have a written rule. They still fail tasks whose answer lives in an expert's head. Labs pay for ground truth in exactly those domains, and they pay more when the tasks survive a strict grader. On an independent benchmark program in late 2026, frontier models solved the founder's written-rule task in every trial and his Class IX judgment task in zero of five."),
+ ("What is the probe log?", "The record of which blind solvers were run against a task before delivery and what they returned. If a model clears a task on written rules alone, the task goes back to the bench. Buyers see the gap before they pay for it."),
+ ("What domains do you cover?", "Class IX parts judgment (dead, duplicate and superseded requisitions, shop stock, turn-ins), dispatch and 5988-E fault flow, deadline and NMC recovery under parts and funds constraints, forward maintenance and expeditionary supply, and warehouse and sort operations. New domains are added through veteran and industrial co-authors under the same protocol."),
+ ("Do you use real Army data?", "No. Environments are built from synthetic and sanitized records that reproduce the judgment. The Engine runs offline on a unit's own laptop; nothing is uploaded, and Dokimos never asks a unit to send its exports."),
+ ("How is Dokimos different from a data labeling vendor?", "Labeling vendors recruit people to annotate what a lab already has. Dokimos authors the cases, writes the exact answers and the verifiers, runs the probes, and delivers the proof. The product is verified judgment, not labor."),
+ ("What does the Engine actually produce?", "An action list for the Monday maintenance meeting: which requisitions are dead, duplicated or already filled under a superseding part number; which vehicles are truly supply-down; which parts to expedite or cross-level. Every rule in it passed a test a clerk wrote."),
+ ("How can a unit buy the course?", "The course is public, regularly scheduled and priced the same for everyone, $1,250 per seat, eight seats per class. That structure is meant for Government Purchase Card buying with an SF-182. Confirm with your resource manager and GPC billing official."),
+ ("Who is behind Dokimos?", "Joshua Griffin, six years U.S. Army motor transport (PLL clerk, dispatch and 5988-E, deadline and NMC tracking), then area manager at an Amazon sort and delivery center. B.S. Business Analytics, accounting minor; MBA, University of Florida, December 2026. Dokimos is a service-disabled veteran-owned business in Port Wentworth, Georgia."),
+ ("How do I get a sample task?", "Use the contact form and name the domain. A sample task with its probe log goes out within 48 hours, with a quote for a shared or exclusive set."),
+ ("How do you say Dokimos?", "DOCK-ee-moss. Ancient Greek for a coin that passed the test on the touchstone. Spell it with a K."),
+]
+faq_items = "".join(f'<details class="border-b border-line py-5"><summary class="flex items-center justify-between font-display text-xl font-semibold text-ink">{html.escape(q)}<span class="ml-4 text-gold">+</span></summary><p class="mt-3 max-w-3xl text-base leading-8 text-slate2">{html.escape(a)}</p></details>' for q, a in FAQ)
+faq_ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]})
+faq_body = f"""
+<main><section class="mx-auto max-w-6xl px-5 py-20"><div class="rule"></div><h1 class="mt-6 font-display text-5xl font-semibold text-ink">Questions, answered plainly</h1>
+<p class="mt-4 max-w-2xl text-lg leading-8 text-slate2">What buyers ask before the first call. If yours is not here, <a class="underline" href="contact.html">ask it</a>.</p>
+<div class="mt-10">{faq_items}</div></section></main>
+<script type="application/ld+json">{faq_ld}</script>"""
+page("faq.html", "FAQ | Dokimos", "Plain answers to what AI labs, Army units and training buyers ask Dokimos before the first call.", faq_body, "")
+
 # --------------------------------------------------------------------- assets
 with open(os.path.join(OUT, "favicon.svg"), "w") as f:
     f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="7" fill="#121212"/><path d="M11 29 L29 11" stroke="#D4A017" stroke-width="5" stroke-linecap="round"/></svg>')
 with open(os.path.join(OUT, "robots.txt"), "w") as f:
     f.write(f"User-agent: *\nAllow: /\nSitemap: {SITE}/sitemap.xml\n")
 with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
-    urls = "".join(f"<url><loc>{SITE}/{p}</loc></url>" for p in ["index.html", "environments.html", "engine.html", "course.html", "contact.html", "privacy.html"])
+    urls = "".join(f"<url><loc>{SITE}/{p}</loc></url>" for p in ["index.html", "environments.html", "engine.html", "course.html", "faq.html", "contact.html", "privacy.html"])
     f.write(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>')
 with open(os.path.join(OUT, "404.html"), "w") as f:
     f.write(head("Not found | Dokimos", "Page not found.", "404.html") + header("") + f'<main><section class="mx-auto max-w-3xl px-5 py-32 text-center"><p class="num text-8xl text-gold">404</p><h1 class="mt-4 font-display text-4xl font-semibold text-ink">That page did not pass.</h1><p class="mt-4 text-lg text-slate2">It is not here. Try the home page.</p><div class="mt-8">{cta("Home", "index.html")}</div></section></main>' + FOOTER)
